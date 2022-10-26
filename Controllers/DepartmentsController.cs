@@ -159,5 +159,10 @@ namespace WebServiceMVC.Controllers
         {
           return (_context.Department?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        public IActionResult Departments()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -15,5 +15,8 @@ namespace WebServiceMVC.Data
         }
 
         public DbSet<WebServiceMVC.Models.Department> Department { get; set; } = default!;
+        public DbSet<WebServiceMVC.Models.Seller> Seller { get; set; } = default!;
+        public DbSet<WebServiceMVC.Models.SalesRecord> SalesRecord { get; set; } = default!;
+        
     }
 }

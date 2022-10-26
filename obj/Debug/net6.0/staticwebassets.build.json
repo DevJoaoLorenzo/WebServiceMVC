@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Kx32uIpGOvzlffMV3+RVKfY1pn5VBGsKY76pYkVEII4=",
+  "Hash": "Ffv6DmkyT1eQtBUGH2Rq29Jh6gDHC2aqD++YnkD44Ic=",
   "Source": "WebServiceMVC",
   "BasePath": "_content/WebServiceMVC",
   "Mode": "Default",
@@ -372,6 +372,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Identity": "/Users/joaolorenzo/RiderProjects/WebServiceMVC/WebServiceMVC/wwwroot/lib/bootstrap/dist/css/bootstrap-tema.css",
+      "SourceId": "WebServiceMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/joaolorenzo/RiderProjects/WebServiceMVC/WebServiceMVC/wwwroot/",
+      "BasePath": "_content/WebServiceMVC",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-tema.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-tema.css"
     },
     {
       "Identity": "/Users/joaolorenzo/RiderProjects/WebServiceMVC/WebServiceMVC/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
