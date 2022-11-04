@@ -1,12 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using WebServiceMVC.Data;
+using WebServiceMVC.Models.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<WebServiceMVCContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("WebServiceMVCContext") ?? throw new InvalidOperationException("Connection string 'WebServiceMVCContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<SellerService>();
 
 var app = builder.Build();
 

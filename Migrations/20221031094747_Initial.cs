@@ -18,7 +18,7 @@ namespace WebServiceMVC.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -31,11 +31,11 @@ namespace WebServiceMVC.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Email = table.Column<string>(type: "text", nullable: false),
-                    BirthDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Name = table.Column<string>(type: "text", nullable: true),
+                    Email = table.Column<string>(type: "text", nullable: true),
+                    BirthDate = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     BaseSalary = table.Column<double>(type: "double precision", nullable: false),
-                    DepartmentId = table.Column<int>(type: "integer", nullable: false)
+                    DepartmentId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -45,7 +45,7 @@ namespace WebServiceMVC.Migrations
                         column: x => x.DepartmentId,
                         principalTable: "Department",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -54,10 +54,10 @@ namespace WebServiceMVC.Migrations
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Date = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    Date = table.Column<DateTime>(type: "timestamp without time zone", nullable: false),
                     Amount = table.Column<double>(type: "double precision", nullable: false),
                     Status = table.Column<int>(type: "integer", nullable: false),
-                    SellerId = table.Column<int>(type: "integer", nullable: false)
+                    SellerId = table.Column<int>(type: "integer", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -67,7 +67,7 @@ namespace WebServiceMVC.Migrations
                         column: x => x.SellerId,
                         principalTable: "Seller",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

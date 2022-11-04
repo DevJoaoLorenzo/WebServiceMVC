@@ -12,6 +12,8 @@ namespace WebServiceMVC.Data
         public WebServiceMVCContext (DbContextOptions<WebServiceMVCContext> options)
             : base(options)
         {
+            AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+            AppContext.SetSwitch("Npgsql.DisableDateTimeInfinityConversions", true);
         }
 
         public DbSet<WebServiceMVC.Models.Department> Department { get; set; } = default!;

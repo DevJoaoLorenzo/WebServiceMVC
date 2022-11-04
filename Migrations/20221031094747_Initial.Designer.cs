@@ -12,7 +12,7 @@ using WebServiceMVC.Data;
 namespace WebServiceMVC.Migrations
 {
     [DbContext(typeof(WebServiceMVCContext))]
-    [Migration("20221026002719_Initial")]
+    [Migration("20221031094747_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -54,7 +54,7 @@ namespace WebServiceMVC.Migrations
                         .HasColumnType("double precision");
 
                     b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("SellerId")
                         .HasColumnType("integer");
@@ -81,7 +81,7 @@ namespace WebServiceMVC.Migrations
                         .HasColumnType("double precision");
 
                     b.Property<DateTime>("BirthDate")
-                        .HasColumnType("timestamp with time zone");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<int>("DepartmentId")
                         .HasColumnType("integer");
