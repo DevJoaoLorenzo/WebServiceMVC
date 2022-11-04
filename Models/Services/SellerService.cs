@@ -18,7 +18,6 @@ public class SellerService
 
     public void Insert(Seller obj) //adicionar no banco de daddos
     {
-        obj.Department = _context.Department.First();
         _context.Add(obj);
         _context.SaveChanges();
     }
